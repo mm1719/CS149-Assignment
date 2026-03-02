@@ -2,6 +2,14 @@
 
 Assignment Description: [Assignment 1: Performance Analysis on a Quad-Core CPU](https://github.com/stanford-cs149/asst1)
 
+## Table of Contents
+* [Program 1: Parallel Fractal Generation Using Threads](#program-1-parallel-fractal-generation-using-threads)
+* [Program 2: Vectorizing Code Using SIMD Intrinsics](#program-2-vectorizing-code-using-simd-intrinsics)
+* [Program 3: Parallel Fractal Generation Using ISPC](#program-3-parallel-fractal-generation-using-ispc)
+* [Program 4: Iterative `sqrt`](#program-4-iterative-sqrt)
+* [Program 5: BLAS `saxpy`](#program-5-blas-saxpy)
+* [Program 6: Making `K-Means` Faster](#program-6-making-k-means-faster)
+
 ## Program 1: Parallel Fractal Generation Using Threads
 
 #### Requirement 1 & 2 & 3
@@ -455,7 +463,7 @@ values[i] = .001f + 2.998f * static_cast<float>(rand()) / RAND_MAX;
 
 To construct specific inputs that maximize or minimize the speedup, the provided iteration plot should be considered:
 
-![asst1 sqrt fraph](handout-images/sqrt_graph.jpg)
+![asst1 sqrt fraph](prog4_sqrt\sqrt_graph.jpg)
 
 Notice that calculating the square root of values near 3.0 requires the highest number of iterations. According to Amdahl's Law, maximizing the workload of the parallelizable portion relative to the sequential overhead will yield the highest theoretical speedup.
 
