@@ -1,7 +1,7 @@
 # CS149-Assignment
 Write-ups and performance analysis for Stanford CS149 (Parallel Computing).
 
-🔗 **Course Website:** [Stanford CS149 (Fall 2023)]([INSERT_YOUR_COURSE_LINK_HERE](https://youtube.com/playlist?list=PLoROMvodv4rMp7MTFr4hQsDEcX7Bx6Odp&si=I1RNVZ54ZK7oFBBi))
+🔗 **Course on Youtube:** [Stanford CS149 (Fall 2023)](https://youtube.com/playlist?list=PLoROMvodv4rMp7MTFr4hQsDEcX7Bx6Odp&si=I1RNVZ54ZK7oFBBi)
 
 ## Overview
 This repository contains my implementations, technical write-ups, and performance analyses for the programming assignments in Stanford's CS149. 
