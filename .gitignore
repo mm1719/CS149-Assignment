@@ -1,0 +1,12 @@
+*
+!*/
+
+!*Report.md
+!/README.md
+!.gitignore
+
+!*.png
+!*.jpg
+!*.jpeg
+
+*/handout-images
