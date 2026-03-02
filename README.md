@@ -10,7 +10,7 @@ This repository contains my implementations, technical write-ups, and performanc
 
 Below is the directory of my assignment reports, each addressing different paradigms of parallel computing:
 
-* **[Assignment 1: Analyzing Parallel Program Performance on a Quad-Core CPU](./asst1)**
+* **[Assignment 1: Analyzing Parallel Program Performance on a Quad-Core CPU](./asst1/Assignment1_Report.md)**
 
 
 * **[Assignment 2: Scheduling Task Graphs on a Multi-Core CPU (Coming Soon)]**
