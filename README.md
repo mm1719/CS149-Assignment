@@ -19,4 +19,4 @@ Below is the directory of my assignment reports, each addressing different parad
 
 * **[Assignment 4: Chat149 - A Flash Attention Transformer DNN (Coming Soon)]**
 
-* * **[[Optional Assignment 5]: Big Graph Processing (Coming Soon)]**
+* **[[Optional Assignment 5]: Big Graph Processing (Coming Soon)]**
