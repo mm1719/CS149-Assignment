@@ -323,7 +323,7 @@ $O(\frac{N}{\text{VECTOR\_WIDTH}} + \log_2(\text{VECTOR\_WIDTH}))$
 
 Ideally, utilizing 8-wide AVX2 vector instructions to process parallel workloads should yield roughly an 8x speedup. However, the result below shows a sub-optimal outcome:
 
-```
+```txt
 $ ./mandelbrot_ispc --view 1
 [mandelbrot serial]:            [206.285] ms
 Wrote image file mandelbrot-serial.ppm
@@ -351,7 +351,7 @@ Wrote image file mandelbrot-ispc.ppm
 
 The speedup using the default `mandelbrot_ispc_withtasks` is approximately 7x, which is twice as fast as using ISPC without tasks:
 
-```
+```txt
 $ ./mandelbrot_ispc --view 1 --task
 [mandelbrot serial]:            [206.362] ms
 Wrote image file mandelbrot-serial.ppm
@@ -439,7 +439,7 @@ The thought experiment suggested by the hint highlights this distinction. Launch
 
 The speedups of the ISPC implementation for single-core and multi-core are roughly ~4x and ~39x, respectively:
 
-```
+```txt
 [sqrt serial]:          [966.162] ms
 [sqrt ispc]:            [244.480] ms
 [sqrt task ispc]:       [24.791] ms
@@ -476,7 +476,7 @@ values[i] = (i % 8 == 0)
 
 The eventual outcomes perfectly demonstrate the maximized and minimized speedups:
 
-```
+```txt
 [sqrt serial]:          [2100.569] ms
 [sqrt ispc]:            [392.999] ms
 [sqrt task ispc]:       [42.646] ms
@@ -484,7 +484,7 @@ The eventual outcomes perfectly demonstrate the maximized and minimized speedups
                                 (49.26x speedup from task ISPC)
 ```
 
-```
+```txt
 [sqrt serial]:          [650.829] ms
 [sqrt ispc]:            [422.324] ms
 [sqrt task ispc]:       [46.403] ms
@@ -558,7 +558,7 @@ void sqrtAVX(int N,
 
 Because this intrinsic implementation runs strictly on a single core, it must be compared against the single-core ISPC version (`mandelbrot_ispc` without `--tasks`). Across all three cases, the handcrafted AVX2 code slightly outperforms the ISPC's version:
 
-```
+```txt
 ====================== Averge Case ======================
 [sqrt serial]:          [926.040] ms
 [sqrt ispc]:            [242.395] ms
@@ -633,7 +633,7 @@ export void saxpy_ispc(uniform int N,
 
 Utilizing the intrinsic `streaming_store` ensures that the evaluated outcome is written directly to the main memory, completely bypassing the cache hierarchy. As a result, the total bandwidth consumption drops to 3 transactions (Read X, Read Y, Write result). This optimization yields an approximate ~1.33x speedup for both the ISPC and ISPC tasks implementations compared to their previous baseline:
 
-```
+```txt
 [saxpy serial]:         [14.341] ms     [20.782] GB/s   [2.789] GFLOPS
 [saxpy ispc]:           [10.926] ms     [27.275] GB/s   [3.661] GFLOPS
 [saxpy task ispc]:      [8.546] ms      [34.871] GB/s   [4.680] GFLOPS
@@ -661,7 +661,7 @@ To isolate the performance bottleneck, `CycleTimer::currentSeconds()` was introd
 
 The profiling results reveal that `computeAssignments` is the primary bottleneck of this K-Means implementation, consuming over 64% of the total runtime. More specifically, assigning data points to their closest centroids accounts for roughly 99% of the time spent within this function:
 
-```
+```txt
 $ ./kmeans
 Running K-means with: M=1000000, N=100, K=3, epsilon=0.100000
 
@@ -737,7 +737,7 @@ void computeAssignments(WorkerArgs *const args) {
 
 With the implementation of 32 threads, the runtime in `[Assign Data]` phase dropped, leading to a highly successful 2.30x overall speedup that exceeds the assignment requirement:
 
-```
+```txt
 $ ./kmeans
 Running K-means with: M=1000000, N=100, K=3, epsilon=0.100000
 
