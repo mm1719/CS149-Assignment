@@ -463,7 +463,7 @@ values[i] = .001f + 2.998f * static_cast<float>(rand()) / RAND_MAX;
 
 To construct specific inputs that maximize or minimize the speedup, the provided iteration plot should be considered:
 
-![asst1 sqrt fraph](prog4_sqrt\sqrt_graph.jpg)
+![asst1 sqrt fraph](prog4_sqrt/sqrt_graph.jpg)
 
 Notice that calculating the square root of values near 3.0 requires the highest number of iterations. According to Amdahl's Law, maximizing the workload of the parallelizable portion relative to the sequential overhead will yield the highest theoretical speedup.
 
