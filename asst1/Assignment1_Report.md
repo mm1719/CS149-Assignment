@@ -320,7 +320,7 @@ float arraySumVector(float* values, int N) {
 ```
 
 Notice that inside the second `for` loop, each `hadd` + `interleave` step effectively halves the number of elements waiting to be summed.  This optimized method brings the overall time complexity of `arraySumVector()` down to
-$O(\frac{N}{\text{VECTOR\_WIDTH}} + \log_2(\text{VECTOR\_WIDTH}))$
+$O(\frac{N}{\text{VECTOR_WIDTH}} + \log_2(\text{VECTOR_WIDTH}))$
 
 
 ## Program 3: Parallel Fractal Generation Using ISPC
